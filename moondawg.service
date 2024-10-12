@@ -1,0 +1,12 @@
+[Unit]
+Description=Starting ROS on startup
+After=network.target
+
+[Service]
+ExecStart=/home/robotics/moondawg-ros/run_moondawg.sh
+User=robotics
+WorkingDirectory=/home/robotics/moondawg-ros
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
